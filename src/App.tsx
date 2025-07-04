@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Filtering from './components/Filtering';
 import Randomize from './components/Randomize';
 import API from './components/API';
-import { RenderingCounter } from './components/RenderingCounter';
+import { UseContextCounter } from './components/useContextCounter';
 
 function App() {
   const [URL,setURL] = useState("")
@@ -41,13 +41,15 @@ function App() {
             <Route path="/filtering" element={<Filtering />} />
             <Route path="/randomize" element={<Randomize />} />
             <Route path="/api" element={<API />} />
-            <Route path="/usecontext" element={<RenderingCounter />} />
+            <Route path="/usecontext" element={<UseContextCounter />} />
           </Routes>
-        </Router>
-        <footer className='flex'>
-          <li className='basis-xs bg-purple-300'><Link to="/usecontext" className='px-12 py-8'>useContextCounter</Link></li>
+        <footer>
+          <ul className='list-none flex flex-row'>
+            <li className='basis-xs bg-purple-300'><Link to="/usecontext" className='px-12 py-8'>useContextCounter</Link></li>
+          </ul> 
           {/* <div className='bg-yellow-300' onClick={checkURL}>checkURL</div> */}
         </footer>
+        </Router>
       </main>
     </>
   )
