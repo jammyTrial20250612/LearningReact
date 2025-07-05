@@ -16,6 +16,9 @@ const RenderingCounter = () => {
         <div>
             <p className="p-64 bg-pink-200">
                 <div>
+                    <p className="text-xl">App.tsx +1</p>
+                    <p className="text-xl">UseContextCounter.tsx +1</p>
+                    <p className="text-xl">RenderingCounter +1</p>
                     <p className="text-xl">{RenderingCounter.RenderingTimes}</p>
                 </div>
             </p>
